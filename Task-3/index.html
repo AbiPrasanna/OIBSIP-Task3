@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Copse&family=Cutive&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Dir/css/style.css">
+    <title>Temperature Converter</title>
+</head>
+<body background="Dir/img/t7.jpg">
+    <!-- <div class="wrapper"> -->
+
+    <div class="calci">
+        <h4 class="container">TEMPERATURE CONVERSION</h4>
+        <form action="" name="form">
+            <div class="Temperature inputs">
+                <div class="Values Calci">
+                    <label for="">Value to convert=</label>
+                    <input type="text" placeholder="0" name="value" id="input_value">
+                </div>
+                <div class="Input">
+                    <label for="">From=</label>
+                    <select name="input" id="input">
+                        <option value="celsius">Celsius-[°C]</option>
+                        <option value="fahrenheit">Fahrenheit-[°F]</option>
+                    </select>
+                </div>
+                <div class="Input">
+                    <label for="">To=</label>
+                    <select name="output" id="output">
+                        <option value="celsius">Celsius[°C]</option>
+                        <option value="fahrenheit">Fahrenheit-[°F]</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="clear" class="clr" onclick="reset()">Clear</button>
+            <button type="button" id="convert" class="clr" onclick="Temperature()">Convert</button>
+            <div class="res">
+                <label for="">Result=</label>   
+                <input type="text" value="" id="result">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function Temperature(){
+            let val=document.getElementById("input_value");
+            let res=document.getElementById("result");
+            let input=document.getElementById("input");
+            let output=document.getElementById("output");
+            val.addEventListener("keyup",Temperature);
+            input.addEventListener("change",Temperature);
+            output.addEventListener("change",Temperature);
+            let inputval=input.value;
+            let outputval=output.value;
+            
+            if(inputval==="celsius" && outputval==="fahrenheit") 
+            {
+                res.value=Number((val.value)*9/5)+32;
+            }else if(inputval === "celsius" && outputval==="celsius")
+            {
+                res.value= val.value;
+            }
+
+            if(inputval==="fahrenheit" && outputval==="celsius")
+            {
+                res.value=Number((val.value-32)*5)/9;
+            }else if(inputval==="fahrenheit" && outputval==="fahrenheit")
+            {
+                res.value=val.value;
+            }
+        }
+        function reset()
+        {
+            Temperature();
+        }
+    </script> 
+    <!-- </div> -->
+</body>
+</html>

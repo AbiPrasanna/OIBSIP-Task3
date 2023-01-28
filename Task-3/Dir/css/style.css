@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka one',sans-serif;
+    font-size: 18px;
+}
+
+.calci{
+    width: 480px;
+    margin: 50px auto;
+    background-color: rgb(87, 211, 241);
+}
+form{
+    padding: 15px;
+}
+h4.container {
+    background: rgb(28, 101, 236);
+    color:black;
+    text-align : center;
+    padding : 15px;
+}
+
+.Input {
+    float: left;
+}
+
+label {
+    font-size: 20px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    padding: 8px;
+}
+
+.Values Calci label {
+    width: 36%;
+    float: left;
+}
+.Values Calci input {
+    width:60%;
+}
+
+.res label {
+    width: 18%;
+    float:left;
+}
+.res input {
+    width:82%;
+}
+
+.Values Calci {
+    margin-bottom: 30px;
+}
+.Input {
+    padding:  23px;
+}
+.res {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+button#convert {
+    float: right;
+}
+button.clr {
+    width: 45%;
+    padding: 12px;
+    border: none;
+    background: rgb(85, 136, 231)9;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+select {
+    padding: 5px;
+}
